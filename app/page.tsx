@@ -3,31 +3,47 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <>
-      <section aria-label="Hero" style={{position:'relative',minHeight:'85vh',display:'flex',alignItems:'end',overflow:'hidden',background:'#101114'}}>
-        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80" alt="Athlete training" loading="eager" style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover',opacity:0.55}} />
-        <div style={{position:'absolute',inset:0,background:'linear-gradient(90deg,#101114 0%,#101114cc 55%,transparent 100%)',pointerEvents:'none'}} />
-        <div style={{position:'relative',zIndex:10,maxWidth:1440,margin:'auto',padding:'110px 30px 80px',width:'100%'}}>
-          <div style={{maxWidth:620}}>
-            <p style={{fontSize:11,textTransform:'uppercase',letterSpacing:'.22em',fontWeight:900,color:'#ed253b',marginBottom:24}}>L SQUARE FITNESS GYM · DAR ES SALAAM</p>
-            <h1 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(48px,5.5vw,83px)',lineHeight:0.95,letterSpacing:'-.045em',color:'#fff',marginBottom:24}}>Built By<br/><span style={{color:'#ed253b'}}>Discipline.</span></h1>
-            <p style={{color:'#c8c9cc',fontSize:15,lineHeight:1.75,maxWidth:510,marginBottom:28}}>Modern Gym. Professional Trainers. Swimming. Personal Training. A Complete Fitness Experience in One Place.</p>
-            <div style={{display:'flex',gap:12,flexWrap:'wrap'}}>
-              <Link href="/pricing" style={{background:'#ed253b',color:'#fff',padding:'12px 20px',borderRadius:10,fontWeight:800,fontSize:13,textDecoration:'none',boxShadow:'0 8px 22px #ed253b35'}}>Join Membership →</Link>
-              <Link href="/about" style={{border:'1px solid rgba(255,255,255,.35)',background:'rgba(255,255,255,.08)',color:'#fff',padding:'12px 20px',borderRadius:10,fontWeight:800,fontSize:13,textDecoration:'none'}}>Explore Our Gym</Link>
+      {/* Hero */}
+      <section aria-label="Hero" style={{position:'relative',minHeight:'100vh',display:'flex',alignItems:'center',background:'#0a0a0c',overflow:'hidden'}}>
+        {/* Background athlete image right */}
+        <img src="/hero-athlete.jpg" alt="Athlete" loading="eager" style={{position:'absolute',top:0,right:0,width:'65%',height:'100%',objectFit:'cover',objectPosition:'center 20%',opacity:0.95,zIndex:1}} />
+        {/* Left gradient fade for text readability */}
+        <div style={{position:'absolute',top:0,left:0,width:'70%',height:'100%',background:'linear-gradient(90deg,#0a0a0c 0%,rgba(10,10,12,0.85) 50%,rgba(10,10,12,0.35) 100%)',zIndex:2,pointerEvents:'none'}} />
+
+        <div style={{position:'relative',zIndex:10,maxWidth:1200,margin:'auto',padding:'140px 30px 100px',width:'100%',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'center'}}>
+          {/* Left content */}
+          <div>
+            <p style={{fontSize:11,textTransform:'uppercase',letterSpacing:'.22em',fontWeight:900,color:'#ed253b',marginBottom:20}}>L SQUARE FITNESS GYM</p>
+            <h1 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(48px,6vw,96px)',lineHeight:0.92,letterSpacing:'-.05em',color:'#fff',marginBottom:24}}>
+              <span style={{display:'block'}}>Stronger</span>
+              <span style={{display:'block'}}>Healthier</span>
+              <span style={{display:'block'}}>Happier <span style={{color:'#ed253b'}}>You.</span></span>
+            </h1>
+            <p style={{color:'#b0b0b5',fontSize:15,lineHeight:1.7,maxWidth:480,marginBottom:32}}>Modern Gym. Professional Trainers. Swimming. Personal Training. A Complete Fitness Experience in One Place.</p>
+            <div style={{display:'flex',gap:14,flexWrap:'wrap',alignItems:'center'}}>
+              <Link href="/register" style={{background:'#ed253b',color:'#fff',padding:'14px 24px',borderRadius:9999,fontWeight:800,fontSize:15,textDecoration:'none',boxShadow:'0 10px 30px #ed253b45'}}>Join Membership →</Link>
+              <button onClick={()=>{const m=document.getElementById('video-modal'); if(m)m.style.display='flex';}} style={{background:'rgba(255,255,255,0.05)',color:'#fff',padding:'14px 24px',borderRadius:9999,fontWeight:800,fontSize:15,textDecoration:'none',border:'1px solid rgba(255,255,255,0.25)',cursor:'pointer',display:'inline-flex',alignItems:'center',gap:10}}>
+                <span style={{width:28,height:28,borderRadius:'50%',background:'#fff',display:'inline-grid',placeItems:'center'}}><span style={{width:0,height:0,borderTop:'6px solid transparent',borderBottom:'6px solid transparent',borderLeft:'10px solid #0a0a0c',marginLeft:3}}/></span> Watch Video
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      <section aria-label="Features" style={{background:'#111215',borderTop:'1px solid rgba(255,255,255,.08)'}}>
-        <div style={{maxWidth:1240,margin:'auto',padding:'32px 30px',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:32,alignItems:'center'}}>
-          <div style={{color:'#fff'}}><div style={{fontFamily:"'Work Sans',sans-serif",fontWeight:900,fontSize:19}}>Modern Equipment</div><div style={{fontSize:12,color:'#bebfc3'}}>State-of-the-art gym</div></div>
-          <div style={{color:'#fff'}}><div style={{fontFamily:"'Work Sans',sans-serif",fontWeight:900,fontSize:19}}>Expert Trainers</div><div style={{fontSize:12,color:'#bebfc3'}}>Certified coaches</div></div>
-          <div style={{color:'#fff'}}><div style={{fontFamily:"'Work Sans',sans-serif",fontWeight:900,fontSize:19}}>Swimming Pool</div><div style={{fontSize:12,color:'#bebfc3'}}>Olympic-size facility</div></div>
-          <div style={{color:'#fff'}}><div style={{fontFamily:"'Work Sans',sans-serif",fontWeight:900,fontSize:19}}>Fitness Community</div><div style={{fontSize:12,color:'#bebfc3'}}>Active members</div></div>
+      {/* Video modal */}
+      <div id="video-modal" style={{position:'fixed',inset:0,zIndex:60,background:'rgba(0,0,0,0.85)',display:'none',alignItems:'center',justifyContent:'center',padding:30}} onClick={e=>{if(e.target===e.currentTarget){const m=document.getElementById('video-modal'); if(m)m.style.display='none';}}}>
+        <div style={{background:'#101114',borderRadius:16,padding:20,maxWidth:720,width:'100%',boxShadow:'0 20px 60px rgba(0,0,0,.5)',position:'relative',border:'1px solid rgba(255,255,255,.08)'}}>
+          <button onClick={()=>{const m=document.getElementById('video-modal'); if(m)m.style.display='none';}} style={{position:'absolute',top:12,right:12,background:'#ed253b',color:'#fff',border:'none',borderRadius:'50%',width:32,height:32,cursor:'pointer',fontWeight:900}}>×</button>
+          <div style={{aspectRatio:'16/9',background:'#111',borderRadius:10,display:'flex',alignItems:'center',justifyContent:'center',color:'#777'}}>
+            <div style={{textAlign:'center'}}>
+              <div style={{fontWeight:900,fontSize:22,color:'#fff',marginBottom:8}}>Gym Tour Preview</div>
+              <div style={{fontSize:13,color:'#999'}}>Video placeholder — no real gym video embedded.</div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
+      {/* Existing sections preserved below */}
       <section id="about" aria-label="About" style={{padding:'85px 30px',background:'#fff'}}>
         <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'center'}}>
           <div>
@@ -94,9 +110,7 @@ export default function HomePage() {
             'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',
             'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80',
             'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',
-          ].map((src,i)=> (
-            <img key={i} src={src} alt="Gym" loading="lazy" style={{width:'100%',borderRadius:14,objectFit:'cover',height:260,boxShadow:'0 10px 35px rgba(11,13,16,.08)'}} />
-          ))}
+          ].map((src,i)=> <img key={i} src={src} alt="Gym" loading="lazy" style={{width:'100%',borderRadius:14,objectFit:'cover',height:260,boxShadow:'0 10px 35px rgba(11,13,16,.08)'}} />)}
         </div>
       </section>
 
