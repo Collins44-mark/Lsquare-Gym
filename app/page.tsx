@@ -1,101 +1,120 @@
-import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <section aria-label="Hero" style={{position:'relative',minHeight:'85vh',display:'flex',alignItems:'end',overflow:'hidden',background:'#101114'}}>
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80" alt="Athlete training" loading="eager" style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover',opacity:0.55}} />
+        <div style={{position:'absolute',inset:0,background:'linear-gradient(90deg,#101114 0%,#101114cc 55%,transparent 100%)',pointerEvents:'none'}} />
+        <div style={{position:'relative',zIndex:10,maxWidth:1440,margin:'auto',padding:'110px 30px 80px',width:'100%'}}>
+          <div style={{maxWidth:620}}>
+            <p style={{fontSize:11,textTransform:'uppercase',letterSpacing:'.22em',fontWeight:900,color:'#ed253b',marginBottom:24}}>L SQUARE FITNESS GYM · DAR ES SALAAM</p>
+            <h1 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(48px,5.5vw,83px)',lineHeight:0.95,letterSpacing:'-.045em',color:'#fff',marginBottom:24}}>Built By<br/><span style={{color:'#ed253b'}}>Discipline.</span></h1>
+            <p style={{color:'#c8c9cc',fontSize:15,lineHeight:1.75,maxWidth:510,marginBottom:28}}>Modern Gym. Professional Trainers. Swimming. Personal Training. A Complete Fitness Experience in One Place.</p>
+            <div style={{display:'flex',gap:12,flexWrap:'wrap'}}>
+              <Link href="/pricing" style={{background:'#ed253b',color:'#fff',padding:'12px 20px',borderRadius:10,fontWeight:800,fontSize:13,textDecoration:'none',boxShadow:'0 8px 22px #ed253b35'}}>Join Membership →</Link>
+              <Link href="/about" style={{border:'1px solid rgba(255,255,255,.35)',background:'rgba(255,255,255,.08)',color:'#fff',padding:'12px 20px',borderRadius:10,fontWeight:800,fontSize:13,textDecoration:'none'}}>Explore Our Gym</Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section aria-label="Features" style={{background:'#111215',borderTop:'1px solid rgba(255,255,255,.08)'}}>
+        <div style={{maxWidth:1240,margin:'auto',padding:'32px 30px',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:32,alignItems:'center'}}>
+          <div style={{color:'#fff'}}><div style={{fontFamily:"'Work Sans',sans-serif",fontWeight:900,fontSize:19}}>Modern Equipment</div><div style={{fontSize:12,color:'#bebfc3'}}>State-of-the-art gym</div></div>
+          <div style={{color:'#fff'}}><div style={{fontFamily:"'Work Sans',sans-serif",fontWeight:900,fontSize:19}}>Expert Trainers</div><div style={{fontSize:12,color:'#bebfc3'}}>Certified coaches</div></div>
+          <div style={{color:'#fff'}}><div style={{fontFamily:"'Work Sans',sans-serif",fontWeight:900,fontSize:19}}>Swimming Pool</div><div style={{fontSize:12,color:'#bebfc3'}}>Olympic-size facility</div></div>
+          <div style={{color:'#fff'}}><div style={{fontFamily:"'Work Sans',sans-serif",fontWeight:900,fontSize:19}}>Fitness Community</div><div style={{fontSize:12,color:'#bebfc3'}}>Active members</div></div>
+        </div>
+      </section>
+
+      <section id="about" aria-label="About" style={{padding:'85px 30px',background:'#fff'}}>
+        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'center'}}>
+          <div>
+            <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#101114',marginBottom:16}}>Built By Discipline.<br/>Fueled By Community.</h2>
+            <p style={{color:'#737780',fontSize:15,lineHeight:1.65}}>L Square Fitness Gym is a premium fitness destination in Dar es Salaam. From modern weights and machines to an Olympic-size pool, we provide everything you need to train, recover, and grow.</p>
+            <div style={{marginTop:24,display:'flex',gap:24}}>
+              <div><div style={{fontWeight:900,fontSize:22,color:'#ed253b'}}>15+</div><div style={{fontSize:12,color:'#777b84'}}>Years Active</div></div>
+              <div><div style={{fontWeight:900,fontSize:22,color:'#ed253b'}}>2k</div><div style={{fontSize:12,color:'#777b84'}}>Members</div></div>
+            </div>
+          </div>
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Gym interior" style={{width:'100%',borderRadius:14,objectFit:'cover',boxShadow:'0 9px 27px rgba(11,13,16,.08)'}} />
+        </div>
+      </section>
+
+      <section id="services" aria-label="Services" style={{padding:'85px 30px',background:'#fff'}}>
+        <div style={{maxWidth:1240,margin:'auto',textAlign:'center',marginBottom:56}}>
+          <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#101114'}}>Facilities & Services</h2>
+          <p style={{color:'#737780',fontSize:15,lineHeight:1.65}}>Modern weights, expert coaching, pool, and community.</p>
+        </div>
+        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:20}}>
+          {[
+            {title:'Gym & Strength',img:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',desc:'Modern weights and machines for all levels.'},
+            {title:'Personal Training',img:'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',desc:'One-on-one coaching for faster results.'},
+            {title:'Swimming',img:'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80',desc:'Olympic-size pool with professional coaching.'},
+            {title:'Fitness Programs',img:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',desc:'Structured group classes and challenges.'}
+          ].map(s=> (
+            <a key={s.title} href="#pricing" style={{background:'#fff',border:'1px solid #e8e9eb',borderRadius:15,overflow:'hidden',boxShadow:'0 10px 35px rgba(11,13,16,.08)',textDecoration:'none',display:'block',transition:'transform .2s'}}>
+              <img src={s.img} alt={s.title} loading="lazy" style={{width:'100%',height:190,objectFit:'cover',display:'block'}} />
+              <div style={{padding:19}}><h3 style={{fontFamily:"'Work Sans'",fontWeight:800,fontSize:19,color:'#101114',margin:'0 0 5px'}}>{s.title}</h3><p style={{fontSize:12,color:'#777b84',lineHeight:1.55,margin:0}}>{s.desc}</p></div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section id="pricing" aria-label="Pricing" style={{padding:'85px 30px',background:'#fff'}}>
+        <div style={{maxWidth:1240,margin:'auto',textAlign:'center',marginBottom:56}}>
+          <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(31px,3.7vw,51px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#101114'}}>Choose Your Plan</h2>
+          <p style={{color:'#737780',fontSize:15,lineHeight:1.65}}>Flexible membership plans to fit your fitness goals.</p>
+        </div>
+        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:17}}>
+          {[
+            {name:'Gym Only',price:'45,000',unit:'/month',img:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',items:['Access to gym floor','Weights & cardio','Locker room']},
+            {name:'Premium',price:'75,000',unit:'/month',img:'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',items:['Gym + Pool','Personal training 2x/mo','Sauna access']},
+            {name:'Family',price:'120,000',unit:'/month',img:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',items:['2 adults + kids','All facilities','Priority booking']}
+          ].map(p=> (
+            <div key={p.name} style={{border:'1px solid #dedfe2',borderRadius:14,overflow:'hidden',background:'#fff',boxShadow:'0 9px 27px rgba(11,13,16,.08)',display:'flex',flexDirection:'column'}}>
+              <img src={p.img} alt={p.name} loading="lazy" style={{height:152,width:'100%',objectFit:'cover'}} />
+              <div style={{padding:24,flex:1,display:'flex',flexDirection:'column'}}>
+                <h3 style={{fontWeight:800,fontSize:20,margin:'0 0 8px'}}>{p.name}</h3>
+                <div style={{fontWeight:900,fontSize:28,marginBottom:12}}>{p.price}<span style={{fontWeight:400,fontSize:14,color:'#777b84'}}> {p.unit}</span></div>
+                <ul style={{margin:'0 0 20px',paddingLeft:18,fontSize:13,lineHeight:1.7,color:'#333'}}>{p.items.map(i=><li key={i}>{i}</li>)}</ul>
+                <Link href="/register" style={{background:'#ed253b',color:'#fff',padding:'12px 20px',borderRadius:10,fontWeight:800,fontSize:13,textDecoration:'none',textAlign:'center',marginTop:'auto'}}>Register →</Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="gallery" aria-label="Gallery" style={{padding:'85px 30px',background:'#fff'}}>
+        <div style={{maxWidth:1240,margin:'auto',textAlign:'center',marginBottom:56}}><h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#101114'}}>Gallery</h2></div>
+        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:20}}>
+          {[
+            'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',
+            'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',
+            'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80',
+            'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',
+          ].map((src,i)=> (
+            <img key={i} src={src} alt="Gym" loading="lazy" style={{width:'100%',borderRadius:14,objectFit:'cover',height:260,boxShadow:'0 10px 35px rgba(11,13,16,.08)'}} />
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" aria-label="Contact" style={{padding:'85px 30px',background:'#fff'}}>
+        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'start'}}>
+          <div>
+            <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#101114',marginBottom:16}}>Contact</h2>
+            <p style={{color:'#737780',fontSize:15,lineHeight:1.65,marginBottom:24}}>Visit us in Dar es Salaam or reach out for membership questions.</p>
+            <div style={{fontSize:14,color:'#333',lineHeight:1.7}}>
+              <div><strong>Email:</strong> info@lsquaregym.co.tz</div>
+              <div><strong>Phone:</strong> +255 712 345 678</div>
+              <div><strong>Location:</strong> Dar es Salaam, Tanzania</div>
+            </div>
+            <a href="#" style={{display:'inline-block',marginTop:24,background:'#ed253b',color:'#fff',padding:'12px 20px',borderRadius:10,fontWeight:800,fontSize:13,textDecoration:'none'}}>Send Message</a>
+          </div>
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Contact" style={{width:'100%',borderRadius:14,objectFit:'cover',boxShadow:'0 9px 27px rgba(11,13,16,.08)'}} />
+        </div>
+      </section>
+    </>
   );
 }
