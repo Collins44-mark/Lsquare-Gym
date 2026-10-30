@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { getRegistrations, getMembers, getPayments, confirmPayment } from '../lib/data';
+import { getRegistrations, getMembers, getPayments } from '../lib/data';
 
 export default function AdminDashboard() {
   const [auth, setAuth] = useState(false);
