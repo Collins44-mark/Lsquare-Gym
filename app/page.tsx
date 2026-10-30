@@ -5,23 +5,22 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section aria-label="Hero" style={{position:'relative',minHeight:'100vh',display:'flex',alignItems:'center',background:'#0a0a0c',overflow:'hidden'}}>
-        {/* Background removed per request */}
-
-        <div style={{position:'relative',zIndex:10,maxWidth:1200,margin:'auto',padding:'140px 30px 100px',width:'100%',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'center'}}>
-          {/* Left content */}
+      <section aria-label="Hero" style={{position:'relative',minHeight:'100vh',display:'flex',alignItems:'center',background:'#0d0d0e',overflow:'hidden'}}>
+        <img src="/hero-athlete.jpg" alt="Athlete" loading="eager" style={{position:'absolute',top:0,right:0,width:'62%',height:'100%',objectFit:'cover',objectPosition:'center 20%',opacity:0.92,zIndex:1}} />
+        <div style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',background:'linear-gradient(90deg,#0d0d0e 0%,rgba(13,13,14,0.75) 45%,rgba(13,13,14,0.35) 100%)',zIndex:2,pointerEvents:'none'}} />
+        <div style={{position:'relative',zIndex:10,maxWidth:1200,margin:'auto',padding:'160px 30px 120px',width:'100%',display:'grid',gridTemplateColumns:'1fr 1fr',gap:70,alignItems:'center'}}>
           <div>
-            <p style={{fontSize:11,textTransform:'uppercase',letterSpacing:'.22em',fontWeight:900,color:'#ed253b',marginBottom:20}}>L SQUARE FITNESS GYM</p>
-            <h1 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(48px,6vw,96px)',lineHeight:0.92,letterSpacing:'-.05em',color:'#fff',marginBottom:24}}>
+            <p style={{fontSize:12,textTransform:'uppercase',letterSpacing:'.25em',fontWeight:900,color:'#ed253b',marginBottom:24}}>L Square Fitness Gym</p>
+            <h1 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(52px,7vw,110px)',lineHeight:0.95,letterSpacing:'-.06em',color:'#fff',marginBottom:28}}>
               <span style={{display:'block'}}>Stronger</span>
               <span style={{display:'block'}}>Healthier</span>
               <span style={{display:'block'}}>Happier <span style={{color:'#ed253b'}}>You.</span></span>
             </h1>
-            <p style={{color:'#b0b0b5',fontSize:15,lineHeight:1.7,maxWidth:480,marginBottom:32}}>Modern Gym. Professional Trainers. Swimming. Personal Training. A Complete Fitness Experience in One Place.</p>
+            <p style={{color:'#b5b5bf',fontSize:16,lineHeight:1.75,maxWidth:460,marginBottom:36}}>Modern Gym. Professional Trainers. Swimming. Personal Training. A Complete Fitness Experience in One Place.</p>
             <div style={{display:'flex',gap:14,flexWrap:'wrap',alignItems:'center'}}>
-              <Link href="/register" style={{background:'#ed253b',color:'#fff',padding:'14px 24px',borderRadius:9999,fontWeight:800,fontSize:15,textDecoration:'none',boxShadow:'0 10px 30px #ed253b45'}}>Join Membership →</Link>
-              <button onClick={()=>{const m=document.getElementById('video-modal'); if(m)m.style.display='flex';}} style={{background:'rgba(255,255,255,0.05)',color:'#fff',padding:'14px 24px',borderRadius:9999,fontWeight:800,fontSize:15,textDecoration:'none',border:'1px solid rgba(255,255,255,0.25)',cursor:'pointer',display:'inline-flex',alignItems:'center',gap:10}}>
-                <span style={{width:28,height:28,borderRadius:'50%',background:'#fff',display:'inline-grid',placeItems:'center'}}><span style={{width:0,height:0,borderTop:'6px solid transparent',borderBottom:'6px solid transparent',borderLeft:'10px solid #0a0a0c',marginLeft:3}}/></span> Watch Video
+              <Link href="/register" style={{background:'#ed253b',color:'#fff',padding:'15px 28px',borderRadius:9999,fontWeight:800,fontSize:15,textDecoration:'none',boxShadow:'0 10px 30px #ed253b55'}}>Join Membership →</Link>
+              <button onClick={()=>{const m=document.getElementById('video-modal'); if(m)m.style.display='flex';}} style={{background:'rgba(255,255,255,0.08)',color:'#fff',padding:'15px 28px',borderRadius:9999,fontWeight:800,fontSize:15,textDecoration:'none',border:'1px solid rgba(255,255,255,0.22)',cursor:'pointer',display:'inline-flex',alignItems:'center',gap:10,backdropFilter:'blur(8px)'}}>
+                <span style={{width:30,height:30,borderRadius:'50%',background:'#fff',display:'inline-grid',placeItems:'center'}}><span style={{width:0,height:0,borderTop:'6px solid transparent',borderBottom:'6px solid transparent',borderLeft:'10px solid #0d0d0e',marginLeft:3}}/></span> Watch Video
               </button>
             </div>
           </div>
@@ -41,41 +40,91 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Existing sections preserved below */}
-      <section id="about" aria-label="About" style={{padding:'85px 30px',background:'#fff'}}>
-        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'center'}}>
+      {/* Facilities */}
+      <section id="facilities" aria-label="Facilities" style={{padding:'100px 30px',background:'#121216'}}>
+        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'start',marginBottom:60}}>
           <div>
-            <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#101114',marginBottom:16}}>Built By Discipline.<br/>Fueled By Community.</h2>
-            <p style={{color:'#737780',fontSize:15,lineHeight:1.65}}>L Square Fitness Gym is a premium fitness destination in Dar es Salaam. From modern weights and machines to an Olympic-size pool, we provide everything you need to train, recover, and grow.</p>
-            <div style={{marginTop:24,display:'flex',gap:24}}>
-              <div><div style={{fontWeight:900,fontSize:22,color:'#ed253b'}}>15+</div><div style={{fontSize:12,color:'#777b84'}}>Years Active</div></div>
-              <div><div style={{fontWeight:900,fontSize:22,color:'#ed253b'}}>2k</div><div style={{fontSize:12,color:'#777b84'}}>Members</div></div>
-            </div>
+            <p style={{fontSize:12,textTransform:'uppercase',letterSpacing:'.22em',fontWeight:900,color:'#ed253b',marginBottom:18}}>Our Facilities & Services</p>
+            <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(36px,4.5vw,58px)',lineHeight:1.05,letterSpacing:'-.05em',color:'#fff'}}>Everything You Need <br/><span style={{color:'#ed253b'}}>Under One Roof</span></h2>
           </div>
-          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Gym interior" style={{width:'100%',borderRadius:14,objectFit:'cover',boxShadow:'0 9px 27px rgba(11,13,16,.08)'}} />
+          <div style={{textAlign:'right',paddingTop:12}}>
+            <p style={{color:'#aaa',fontSize:15,lineHeight:1.7,maxWidth:380,marginLeft:'auto'}}>From modern gym equipment to expert coaching and a refreshing swimming pool, L Square gives you a complete fitness experience designed for every goal.</p>
+          </div>
         </div>
-      </section>
-
-      <section id="services" aria-label="Services" style={{padding:'85px 30px',background:'#fff'}}>
-        <div style={{maxWidth:1240,margin:'auto',textAlign:'center',marginBottom:56}}>
-          <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#101114'}}>Facilities & Services</h2>
-          <p style={{color:'#737780',fontSize:15,lineHeight:1.65}}>Modern weights, expert coaching, pool, and community.</p>
-        </div>
-        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:20}}>
+        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:22}}>
           {[
             {title:'Gym & Strength',img:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',desc:'Modern weights and machines for all levels.'},
             {title:'Personal Training',img:'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',desc:'One-on-one coaching for faster results.'},
-            {title:'Swimming',img:'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80',desc:'Olympic-size pool with professional coaching.'},
+            {title:'Swimming Pool',img:'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80',desc:'Olympic-size pool with professional coaching.'},
             {title:'Fitness Programs',img:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',desc:'Structured group classes and challenges.'}
           ].map(s=> (
-            <a key={s.title} href="#pricing" style={{background:'#fff',border:'1px solid #e8e9eb',borderRadius:15,overflow:'hidden',boxShadow:'0 10px 35px rgba(11,13,16,.08)',textDecoration:'none',display:'block',transition:'transform .2s'}}>
-              <img src={s.img} alt={s.title} loading="lazy" style={{width:'100%',height:190,objectFit:'cover',display:'block'}} />
-              <div style={{padding:19}}><h3 style={{fontFamily:"'Work Sans'",fontWeight:800,fontSize:19,color:'#101114',margin:'0 0 5px'}}>{s.title}</h3><p style={{fontSize:12,color:'#777b84',lineHeight:1.55,margin:0}}>{s.desc}</p></div>
+            <a key={s.title} href="#pricing" style={{position:'relative',background:'#18181f',border:'1px solid rgba(255,255,255,0.08)',borderRadius:24,overflow:'hidden',textDecoration:'none',display:'block',boxShadow:'0 20px 50px rgba(0,0,0,.45)',transition:'transform .25s ease, box-shadow .25s ease'}} onMouseEnter={e=>{e.currentTarget.style.transform='translateY(-6px)';e.currentTarget.style.boxShadow='0 28px 60px rgba(0,0,0,.55)';}} onMouseLeave={e=>{e.currentTarget.style.transform='translateY(0)';e.currentTarget.style.boxShadow='0 20px 50px rgba(0,0,0,.45)';}}>
+              <div style={{position:'relative',height:240,overflow:'hidden'}}>
+                <img src={s.img} alt={s.title} loading="lazy" style={{width:'100%',height:'100%',objectFit:'cover',display:'block',transition:'transform .6s ease'}} onMouseEnter={e=>e.currentTarget.style.transform='scale(1.08)'} onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'} />
+                <div style={{position:'absolute',bottom:0,left:0,right:0,height:'55%',background:'linear-gradient(to top, rgba(12,12,14,0.95), rgba(12,12,14,0))',pointerEvents:'none'}} />
+                <div style={{position:'absolute',top:14,left:14,width:40,height:40,borderRadius:'50%',background:'rgba(237,37,43,0.95)',display:'inline-grid',placeItems:'center',backdropFilter:'blur(6px)',boxShadow:'0 8px 24px rgba(237,37,43,.35)',border:'1px solid rgba(255,255,255,.08)'}}>
+                  <span style={{color:'#fff',fontWeight:900,fontSize:16}}>→</span>
+                </div>
+              </div>
+              <div style={{padding:22}}>
+                <h3 style={{fontFamily:"'Work Sans'",fontWeight:800,fontSize:20,color:'#fff',margin:'0 0 6px'}}>{s.title}</h3>
+                <p style={{fontSize:13,color:'#aaa',lineHeight:1.55,margin:0}}>{s.desc}</p>
+              </div>
             </a>
           ))}
         </div>
       </section>
 
+      {/* About / Feature Banner */}
+      <section aria-label="About Banner" style={{padding:'100px 30px',background:'#0a0a0c'}}>
+        <div style={{maxWidth:1240,margin:'auto',borderRadius:28,overflow:'hidden',position:'relative',background:'#0f0f13',border:'1px solid rgba(255,255,255,0.06)',boxShadow:'0 30px 80px rgba(0,0,0,.55)'}}>
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80" alt="Training" style={{position:'absolute',top:0,right:0,width:'55%',height:'100%',objectFit:'cover',objectPosition:'center 25%',opacity:0.35,zIndex:1}} />
+          <div style={{position:'absolute',top:0,left:0,width:'65%',height:'100%',background:'linear-gradient(90deg,#0f0f13 0%,rgba(15,15,19,0.88) 50%,rgba(15,15,19,0.4) 100%)',zIndex:2}} />
+          <div style={{position:'relative',zIndex:10,display:'grid',gridTemplateColumns:'1.1fr 0.9fr',gap:60,alignItems:'center',padding:'80px 60px'}}>
+            <div>
+              <p style={{fontSize:12,textTransform:'uppercase',letterSpacing:'.22em',fontWeight:900,color:'#ed253b',marginBottom:18}}>A Better, Stronger You</p>
+              <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(32px,4vw,52px)',lineHeight:1.08,letterSpacing:'-.045em',color:'#fff',marginBottom:18}}>Built By Discipline. <br/><span style={{color:'#ed253b'}}>Fueled By Community.</span></h2>
+              <p style={{color:'#b5b5bf',fontSize:15,lineHeight:1.7,marginBottom:28}}>L Square Fitness Gym is a premium fitness destination in Dar es Salaam. From modern weights and machines to an Olympic-size pool, we provide everything you need to train, recover, and grow.</p>
+              <div style={{display:'flex',gap:28,marginBottom:30}}>
+                {[
+                  {label:'2K+',sub:'Active Members'},
+                  {label:'15+',sub:'Years in Fitness'},
+                  {label:'50+',sub:'Modern Machines'},
+                  {label:'Expert',sub:'Trainers'},
+                ].map(s=> (
+                  <div key={s.label}><div style={{fontWeight:900,fontSize:22,color:'#ed253b'}}>{s.label}</div><div style={{fontSize:11,color:'#777',marginTop:2}}>{s.sub}</div></div>
+                ))}
+              </div>
+              <div style={{display:'flex',gap:14,alignItems:'center',flexWrap:'wrap'}}>
+                <Link href="/register" style={{background:'#ed253b',color:'#fff',padding:'13px 22px',borderRadius:9999,fontWeight:800,fontSize:14,textDecoration:'none',boxShadow:'0 8px 20px #ed253b55'}}>Join Membership →</Link>
+                <a href="#facilities" style={{color:'#fff',fontWeight:600,fontSize:14,textDecoration:'none',borderBottom:'1px solid rgba(255,255,255,0.3)',paddingBottom:2}}>Explore Facilities →</a>
+              </div>
+            </div>
+            <div style={{position:'relative'}}>
+              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Training" style={{width:'100%',borderRadius:20,objectFit:'cover',boxShadow:'0 20px 50px rgba(0,0,0,.4)',display:'block'}} />
+              <div style={{position:'absolute',bottom:-18,right:-10,width:220,padding:18,borderRadius:16,background:'rgba(255,255,255,0.08)',border:'1px solid rgba(255,255,255,0.12)',backdropFilter:'blur(12px)',boxShadow:'0 16px 40px rgba(0,0,0,.35)'}}>
+                <div style={{fontWeight:900,fontSize:20,color:'#fff',lineHeight:1.15,marginBottom:6}}>Train <br/>Recover <br/><span style={{color:'#ed253b'}}>Grow</span></div>
+                <div style={{fontSize:11,color:'#aaa',marginTop:8}}>More Than A Gym<br/>A Community.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose */}
+      <section aria-label="Why Choose" style={{padding:'100px 30px',background:'#121216'}}>
+        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'start'}}>
+          <div>
+            <p style={{fontSize:12,textTransform:'uppercase',letterSpacing:'.22em',fontWeight:900,color:'#ed253b',marginBottom:18}}>Why Choose L Square</p>
+            <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(36px,4.5vw,58px)',lineHeight:1.05,letterSpacing:'-.05em',color:'#fff'}}>More Than A Gym <br/><span style={{color:'#ed253b'}}>A Lifestyle.</span></h2>
+          </div>
+          <div style={{paddingTop:12}}>
+            <p style={{color:'#aaa',fontSize:15,lineHeight:1.7}}>We combine world-class facilities, professional trainers and a supportive community to give you the best fitness experience in Dar es Salaam.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Existing routes preserved */}
       <section id="pricing" aria-label="Pricing" style={{padding:'85px 30px',background:'#fff'}}>
         <div style={{maxWidth:1240,margin:'auto',textAlign:'center',marginBottom:56}}>
           <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(31px,3.7vw,51px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#101114'}}>Choose Your Plan</h2>
@@ -130,4 +179,3 @@ export default function HomePage() {
     </>
   );
 }
-/* redeploy trigger */
