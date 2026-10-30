@@ -8,8 +8,6 @@ export default function HomePage() {
       <section aria-label="Hero" style={{position:'relative',minHeight:'100vh',display:'flex',alignItems:'center',background:'#0a0a0c',overflow:'hidden'}}>
         {/* Background athlete image right */}
         <img src="/hero-athlete.jpg" alt="Athlete" loading="eager" style={{position:'absolute',top:0,right:0,width:'65%',height:'100%',objectFit:'cover',objectPosition:'center 20%',opacity:0.95,zIndex:1}} />
-        {/* Left gradient fade for text readability */}
-        <div style={{position:'absolute',top:0,left:0,width:'70%',height:'100%',background:'linear-gradient(90deg,#0a0a0c 0%,rgba(10,10,12,0.85) 50%,rgba(10,10,12,0.35) 100%)',zIndex:2,pointerEvents:'none'}} />
 
         <div style={{position:'relative',zIndex:10,maxWidth:1200,margin:'auto',padding:'140px 30px 100px',width:'100%',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'center'}}>
           {/* Left content */}
