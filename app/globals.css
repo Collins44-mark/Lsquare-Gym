@@ -1,4 +1,4 @@
 html{scroll-behavior:smooth}
-body{font-family:"DM Sans",ui-sans-serif,system-ui,sans-serif;color:#101114;background:#fff;-webkit-font-smoothing:antialiased;margin:0}
-::selection{background:rgba(237,37,59,.14)}
+body{font-family:"DM Sans",ui-sans-serif,system-ui,sans-serif;color:#fff;background:#090A0D;-webkit-font-smoothing:antialiased;margin:0}
+::selection{background:rgba(237,37,59,.18);color:#fff}
 img{max-width:100%;display:block;height:auto}

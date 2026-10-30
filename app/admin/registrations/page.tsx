@@ -6,8 +6,8 @@ export default function AdminRegistrations() {
   useEffect(()=>setRegs(getRegistrations()), []);
   return (
     <div>
-      <h1 style={{fontWeight:900,fontSize:28,color:'#101114',marginBottom:20}}>Registrations</h1>
-      <table style={{width:'100%',background:'#fff',border:'1px solid #e8e9eb',borderRadius:12,borderCollapse:'collapse',fontSize:13}}>
+      <h1 style={{fontWeight:900,fontSize:28,color:'#fff',marginBottom:20}}>Registrations</h1>
+      <table style={{width:'100%',background:'#090A0D',border:'1px solid rgba(255,255,255,0.09)',borderRadius:12,borderCollapse:'collapse',fontSize:13}}>
         <thead><tr style={{background:'#101114',color:'#fff',textAlign:'left'}}><th style={{padding:10}}>Name</th><th>Email</th><th>Plan</th><th>Payment</th><th>Action</th></tr></thead>
         <tbody>
           {regs.map(r=> (

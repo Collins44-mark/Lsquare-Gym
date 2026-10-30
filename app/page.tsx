@@ -20,7 +20,7 @@ export default function HomePage() {
             <div style={{display:'flex',gap:14,flexWrap:'wrap',alignItems:'center'}}>
               <Link href="/register" style={{background:'#ed253b',color:'#fff',padding:'15px 28px',borderRadius:9999,fontWeight:800,fontSize:15,textDecoration:'none',boxShadow:'0 10px 30px #ed253b55'}}>Join Membership →</Link>
               <button onClick={()=>{const m=document.getElementById('video-modal'); if(m)m.style.display='flex';}} style={{background:'rgba(255,255,255,0.08)',color:'#fff',padding:'15px 28px',borderRadius:9999,fontWeight:800,fontSize:15,textDecoration:'none',border:'1px solid rgba(255,255,255,0.22)',cursor:'pointer',display:'inline-flex',alignItems:'center',gap:10,backdropFilter:'blur(8px)'}}>
-                <span style={{width:30,height:30,borderRadius:'50%',background:'#fff',display:'inline-grid',placeItems:'center'}}><span style={{width:0,height:0,borderTop:'6px solid transparent',borderBottom:'6px solid transparent',borderLeft:'10px solid #0d0d0e',marginLeft:3}}/></span> Watch Video
+                <span style={{width:30,height:30,borderRadius:'50%',background:'#090A0D',display:'inline-grid',placeItems:'center'}}><span style={{width:0,height:0,borderTop:'6px solid transparent',borderBottom:'6px solid transparent',borderLeft:'10px solid #0d0d0e',marginLeft:3}}/></span> Watch Video
               </button>
             </div>
           </div>
@@ -125,10 +125,10 @@ export default function HomePage() {
       </section>
 
       {/* Existing routes preserved */}
-      <section id="pricing" aria-label="Pricing" style={{padding:'85px 30px',background:'#fff'}}>
+      <section id="pricing" aria-label="Pricing" style={{padding:'85px 30px',background:'#090A0D'}}>
         <div style={{maxWidth:1240,margin:'auto',textAlign:'center',marginBottom:56}}>
-          <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(31px,3.7vw,51px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#101114'}}>Choose Your Plan</h2>
-          <p style={{color:'#737780',fontSize:15,lineHeight:1.65}}>Flexible membership plans to fit your fitness goals.</p>
+          <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(31px,3.7vw,51px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#fff'}}>Choose Your Plan</h2>
+          <p style={{color:'#A1A1AA',fontSize:15,lineHeight:1.65}}>Flexible membership plans to fit your fitness goals.</p>
         </div>
         <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:17}}>
           {[
@@ -136,7 +136,7 @@ export default function HomePage() {
             {name:'Premium',price:'75,000',unit:'/month',img:'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',items:['Gym + Pool','Personal training 2x/mo','Sauna access']},
             {name:'Family',price:'120,000',unit:'/month',img:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',items:['2 adults + kids','All facilities','Priority booking']}
           ].map(p=> (
-            <div key={p.name} style={{border:'1px solid #dedfe2',borderRadius:14,overflow:'hidden',background:'#fff',boxShadow:'0 9px 27px rgba(11,13,16,.08)',display:'flex',flexDirection:'column'}}>
+            <div key={p.name} style={{borderRadius:14,overflow:'hidden',background:'rgba(255,255,255,0.04)',backdropFilter:'blur(12px)',border:'1px solid rgba(255,255,255,0.09)',boxShadow:'0 8px 30px rgba(0,0,0,.4)',display:'flex',flexDirection:'column'}}>
               <img src={p.img} alt={p.name} loading="lazy" style={{height:152,width:'100%',objectFit:'cover'}} />
               <div style={{padding:24,flex:1,display:'flex',flexDirection:'column'}}>
                 <h3 style={{fontWeight:800,fontSize:20,margin:'0 0 8px'}}>{p.name}</h3>
@@ -149,23 +149,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="gallery" aria-label="Gallery" style={{padding:'85px 30px',background:'#fff'}}>
-        <div style={{maxWidth:1240,margin:'auto',textAlign:'center',marginBottom:56}}><h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#101114'}}>Gallery</h2></div>
+      <section id="gallery" aria-label="Gallery" style={{padding:'85px 30px',background:'#090A0D'}}>
+        <div style={{maxWidth:1240,margin:'auto',textAlign:'center',marginBottom:56}}><h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#fff'}}>Gallery</h2></div>
         <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:20}}>
           {[
             'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',
             'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',
             'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80',
             'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',
-          ].map((src,i)=> <img key={i} src={src} alt="Gym" loading="lazy" style={{width:'100%',borderRadius:14,objectFit:'cover',height:260,boxShadow:'0 10px 35px rgba(11,13,16,.08)'}} />)}
+          ].map((src,i)=> <img key={i} src={src} alt="Gym" loading="lazy" style={{width:'100%',borderRadius:14,objectFit:'cover',height:260,boxShadow:'0 8px 30px rgba(0,0,0,.4)'}} />)}
         </div>
       </section>
 
-      <section id="contact" aria-label="Contact" style={{padding:'85px 30px',background:'#fff'}}>
+      <section id="contact" aria-label="Contact" style={{padding:'85px 30px',background:'#090A0D'}}>
         <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'start'}}>
           <div>
-            <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#101114',marginBottom:16}}>Contact</h2>
-            <p style={{color:'#737780',fontSize:15,lineHeight:1.65,marginBottom:24}}>Visit us in Dar es Salaam or reach out for membership questions.</p>
+            <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#fff',marginBottom:16}}>Contact</h2>
+            <p style={{color:'#A1A1AA',fontSize:15,lineHeight:1.65,marginBottom:24}}>Visit us in Dar es Salaam or reach out for membership questions.</p>
             <div style={{fontSize:14,color:'#333',lineHeight:1.7}}>
               <div><strong>Email:</strong> info@lsquaregym.co.tz</div>
               <div><strong>Phone:</strong> +255 712 345 678</div>
@@ -173,7 +173,7 @@ export default function HomePage() {
             </div>
             <a href="#" style={{display:'inline-block',marginTop:24,background:'#ed253b',color:'#fff',padding:'12px 20px',borderRadius:10,fontWeight:800,fontSize:13,textDecoration:'none'}}>Send Message</a>
           </div>
-          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Contact" style={{width:'100%',borderRadius:14,objectFit:'cover',boxShadow:'0 9px 27px rgba(11,13,16,.08)'}} />
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Contact" style={{width:'100%',borderRadius:14,objectFit:'cover',boxShadow:'0 8px 30px rgba(0,0,0,.4)'}} />
         </div>
       </section>
     </>

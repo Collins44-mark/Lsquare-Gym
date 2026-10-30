@@ -25,11 +25,11 @@ export default function StaffAttendance() {
   };
 
   return (
-    <section style={{padding:'85px 30px',background:'#fff'}}>
+    <section style={{padding:'85px 30px',background:'#090A0D'}}>
       <div style={{maxWidth:1240,margin:'auto'}}>
-        <h1 style={{fontWeight:900,fontSize:28,color:'#101114',marginBottom:8}}>Staff Attendance</h1>
+        <h1 style={{fontWeight:900,fontSize:28,color:'#fff',marginBottom:8}}>Staff Attendance</h1>
         <p style={{color:'#777b84',fontSize:13,marginBottom:24}}>Only active, non-expired members can be checked in.</p>
-        <table style={{width:'100%',background:'#fff',border:'1px solid #e8e9eb',borderRadius:12,borderCollapse:'collapse',fontSize:13}}>
+        <table style={{width:'100%',background:'#090A0D',border:'1px solid rgba(255,255,255,0.09)',borderRadius:12,borderCollapse:'collapse',fontSize:13}}>
           <thead><tr style={{background:'#101114',color:'#fff',textAlign:'left'}}><th style={{padding:10}}>Member</th><th>Email</th><th>Plan</th><th>Valid Until</th><th>Check-in</th></tr></thead>
           <tbody>
             {members.map(m=> {
