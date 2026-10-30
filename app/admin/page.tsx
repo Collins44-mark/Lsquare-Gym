@@ -1,27 +1,54 @@
-import { getRegistrations, getMembers, getPayments, getPlans } from '../lib/data';
+'use client';
+import { useState } from 'react';
+import { getRegistrations, getMembers, getPayments, confirmPayment } from '../lib/data';
+
 export default function AdminDashboard() {
+  const [auth, setAuth] = useState(false);
+  const [pw, setPw] = useState('');
+  if (!auth) {
+    return (
+      <div style={{minHeight:'80vh',display:'flex',alignItems:'center',justifyContent:'center',background:'#090A0D'}}>
+        <div style={{background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.1)',borderRadius:24,padding:40,maxWidth:420,width:'100%'}}>
+          <h2 style={{fontWeight:900,fontSize:24,color:'#fff',marginBottom:8}}>Admin Access</h2>
+          <p style={{color:'#aaa',fontSize:14,marginBottom:24}}>Enter password to access the gym management system.</p>
+          <input type="password" value={pw} onChange={e=>setPw(e.target.value)} placeholder="Password" style={{width:'100%',padding:12,borderRadius:10,border:'1px solid rgba(255,255,255,0.15)',background:'#121318',color:'#fff',marginBottom:12,fontSize:14}} />
+          <button onClick={()=>{if(pw==='admin') setAuth(true); else alert('Invalid');}} style={{width:'100%',padding:12,borderRadius:10,border:'none',background:'#ed253b',color:'#fff',fontWeight:800,fontSize:14,cursor:'pointer'}}>Login</button>
+        </div>
+      </div>
+    );
+  }
   const regs = getRegistrations();
   const members = getMembers();
   const payments = getPayments();
+  const active = members.filter(m=>m.active && new Date(m.validUntil) > new Date()).length;
+  const expired = members.filter(m=>!m.active || new Date(m.validUntil) <= new Date()).length;
+  const pending = regs.filter(r=>r.status==='pending').length;
+  const revenue = payments.filter(p=>p.status==='confirmed').reduce((s,p)=>s+p.amount,0);
   return (
-    <div>
-      <h1 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:28,color:'#fff',marginBottom:20}}>Dashboard</h1>
-      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:16,marginBottom:24}}>
-        <div style={{background:'#090A0D',border:'1px solid rgba(255,255,255,0.09)',borderRadius:12,padding:20}}><div style={{fontWeight:900,fontSize:24,color:'#ed253b'}}>{regs.length}</div><div style={{fontSize:13,color:'#777b84'}}>Registrations</div></div>
-        <div style={{background:'#090A0D',border:'1px solid rgba(255,255,255,0.09)',borderRadius:12,padding:20}}><div style={{fontWeight:900,fontSize:24,color:'#ed253b'}}>{members.length}</div><div style={{fontSize:13,color:'#777b84'}}>Active Members</div></div>
-        <div style={{background:'#090A0D',border:'1px solid rgba(255,255,255,0.09)',borderRadius:12,padding:20}}><div style={{fontWeight:900,fontSize:24,color:'#ed253b'}}>{payments.length}</div><div style={{fontSize:13,color:'#777b84'}}>Confirmed Payments</div></div>
+    <div style={{padding:30,color:'#fff'}}>
+      <h1 style={{fontWeight:900,fontSize:28,marginBottom:24}}>Dashboard</h1>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:16,marginBottom:30}}>
+        {[
+          {label:'Members',val:members.length},
+          {label:'Active',val:active},
+          {label:'Expired',val:expired},
+          {label:'Pending Reg.',val:pending},
+          {label:'Pending Pay',val:regs.filter(r=>r.paymentStatus==='pending').length},
+          {label:'Revenue TZS',val:revenue.toLocaleString()},
+        ].map(s=> (
+          <div key={s.label} style={{background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:20}}>
+            <div style={{fontSize:12,color:'#aaa'}}>{s.label}</div>
+            <div style={{fontWeight:900,fontSize:22,color:'#fff'}}>{s.val}</div>
+          </div>
+        ))}
       </div>
-      <h2 style={{fontWeight:800,fontSize:18,marginBottom:10}}>Recent Registrations</h2>
-      <table style={{width:'100%',background:'#090A0D',border:'1px solid rgba(255,255,255,0.09)',borderRadius:12,borderCollapse:'collapse',fontSize:13}}>
-        <thead><tr style={{background:'#101114',color:'#fff',textAlign:'left'}}><th style={{padding:10}}>Name</th><th>Email</th><th>Plan</th><th>Payment</th><th>Status</th></tr></thead>
-        <tbody>
-          {regs.slice(-6).reverse().map(r=> (
-            <tr key={r.id} style={{borderBottom:'1px solid #e8e9eb'}}>
-              <td style={{padding:10}}>{r.name}</td><td>{r.email}</td><td>{getPlans().find(p=>p.id===r.planId)?.name}</td><td>{r.paymentStatus}</td><td>{r.status}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div style={{background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:20}}>
+        <h3 style={{fontWeight:800,fontSize:16,marginBottom:12}}>Recent Registrations</h3>
+        <table style={{width:'100%',fontSize:13,borderCollapse:'collapse'}}>
+          <thead><tr style={{color:'#aaa',textAlign:'left'}}><th style={{padding:6}}>Name</th><th>Plan</th><th>Status</th><th>Payment</th></tr></thead>
+          <tbody>{regs.slice(-10).map(r=> (<tr key={r.id} style={{borderBottom:'1px solid rgba(255,255,255,0.06)'}}><td style={{padding:6}}>{r.name}</td><td>{r.planId}</td><td>{r.status}</td><td>{r.paymentStatus}</td></tr>))}</tbody>
+        </table>
+      </div>
     </div>
   );
 }

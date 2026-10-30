@@ -16,11 +16,9 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <div style={{fontWeight:700,color:'#fff',fontSize:13,marginBottom:12}}>Admin</div>
+          <div style={{fontWeight:700,color:'#fff',fontSize:13,marginBottom:12}}>Contact</div>
           <div style={{display:'flex',flexDirection:'column',gap:6,fontSize:13}}>
-            <a href="/admin" style={{color:'#c9c9ce',textDecoration:'none'}}>Dashboard</a>
-            <a href="/admin/registrations" style={{color:'#c9c9ce',textDecoration:'none'}}>Registrations</a>
-            <a href="/staff/attendance" style={{color:'#c9c9ce',textDecoration:'none'}}>Attendance</a>
+            <a href="mailto:info@lsquaregym.co.tz" style={{color:'#c9c9ce',textDecoration:'none'}}>info@lsquaregym.co.tz</a>
           </div>
         </div>
       </div>

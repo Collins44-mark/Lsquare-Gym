@@ -8,7 +8,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     {label:'Reports',href:'/admin/reports'},
   ];
   return (
-    <div style={{display:'grid',gridTemplateColumns:'260px 1fr',minHeight:'80vh',background:'#f7f7f9'}}>
+    <div style={{display:'grid',gridTemplateColumns:'260px 1fr',minHeight:'80vh',background:'#090A0D'}}>
       <aside style={{background:'#101114',padding:24,color:'#fff'}}>
         <div style={{fontWeight:900,fontSize:18,letterSpacing:'-.04em',marginBottom:24}}>Admin</div>
         <nav style={{display:'flex',flexDirection:'column',gap:10}}>
