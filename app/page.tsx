@@ -58,12 +58,12 @@ export default function HomePage() {
             {title:'Swimming Pool',img:'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80',desc:'Olympic-size pool with professional coaching.'},
             {title:'Fitness Programs',img:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',desc:'Structured group classes and challenges.'}
           ].map(s=> (
-            <a key={s.title} href="#pricing" style={{position:'relative',background:'#0d0d0e',border:'1px solid rgba(255,255,255,0.1)',borderRadius:22,overflow:'hidden',textDecoration:'none',display:'block',boxShadow:'0 20px 50px rgba(0,0,0,.35)',transition:'transform .3s ease, box-shadow .3s ease'}} onMouseEnter={e=>{e.currentTarget.style.transform='translateY(-4px)';e.currentTarget.style.boxShadow='0 28px 60px rgba(0,0,0,.5)';}} onMouseLeave={e=>{e.currentTarget.style.transform='translateY(0)';e.currentTarget.style.boxShadow='0 20px 50px rgba(0,0,0,.35)';}}>
+            <a key={s.title} href="#pricing" style={{position:'relative',borderRadius:22,overflow:'hidden',textDecoration:'none',display:'block',boxShadow:'0 10px 30px rgba(0,0,0,.3)',transition:'transform .25s ease'}}>
               <div style={{position:'relative',height:260,overflow:'hidden'}}>
-                <img src={s.img} alt={s.title} loading="lazy" style={{width:'100%',height:'100%',objectFit:'cover',display:'block',transition:'transform .7s ease'}} onMouseEnter={e=>e.currentTarget.style.transform='scale(1.06)'} onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'} />
-                <div style={{position:'absolute',bottom:0,left:0,right:0,padding:'24px 22px',background:'rgba(20,22,26,0.78)',backdropFilter:'blur(16px)',WebkitBackdropFilter:'blur(16px)',borderTop:'1px solid rgba(255,255,255,0.1)'}}>
-                  <h3 style={{fontFamily:"'Work Sans'",fontWeight:800,fontSize:20,color:'#fff',margin:'0 0 4px',letterSpacing:'-.02em'}}>{s.title}</h3>
-                  <p style={{fontSize:13,color:'#ccc',lineHeight:1.5,margin:0}}>{s.desc}</p>
+                <img src={s.img} alt={s.title} loading="lazy" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
+                <div style={{position:'absolute',bottom:0,left:0,right:0,padding:'22px',background:'rgba(9,10,13,0.55)',backdropFilter:'blur(10px)',WebkitBackdropFilter:'blur(10px)',borderTop:'1px solid rgba(255,255,255,0.08)'}}>
+                  <h3 style={{fontFamily:"'Work Sans'",fontWeight:800,fontSize:18,color:'#fff',margin:'0 0 3px'}}>{s.title}</h3>
+                  <p style={{fontSize:12.5,color:'#ccc',lineHeight:1.45,margin:0}}>{s.desc}</p>
                 </div>
               </div>
             </a>
