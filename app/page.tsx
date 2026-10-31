@@ -8,9 +8,9 @@ export default function HomePage() {
       <section aria-label="Hero" style={{position:'relative',minHeight:'100vh',display:'flex',alignItems:'center',background:'#0d0d0e',overflow:'hidden'}}>
         <img src="/hero-athlete.jpg" alt="Athlete" loading="eager" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',objectFit:'cover',objectPosition:'center 25%',opacity:0.92,zIndex:1}} />
         <div style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',background:'linear-gradient(90deg,#0d0d0e 0%,rgba(13,13,14,0.65) 55%,rgba(13,13,14,0.4) 100%)',zIndex:2,pointerEvents:'none'}} />
-        <div style={{position:'relative',zIndex:10,maxWidth:1200,margin:'auto',padding:'110px 24px 80px',width:'100%',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:40,alignItems:'center'}}>
+        <div style={{position:'relative',zIndex:10,maxWidth:1200,margin:'auto',padding:'70px 30px 60px',width:'100%',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:40,alignItems:'center'}}>
           <div>
-            <p style={{fontSize:12,textTransform:'uppercase',letterSpacing:'.25em',fontWeight:900,color:'#ed253b',marginBottom:24}}>L Square Fitness Gym</p>
+            <p style={{fontSize:12,textTransform:'uppercase',letterSpacing:'.25em',fontWeight:900,color:'#ed253b',marginBottom:12}}>L Square Fitness Gym</p>
             <h1 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(52px,7vw,110px)',lineHeight:0.95,letterSpacing:'-.06em',color:'#fff',marginBottom:28}}>
               <span style={{display:'block'}}>Stronger</span>
               <span style={{display:'block'}}>Healthier</span>
