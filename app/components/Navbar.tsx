@@ -25,7 +25,7 @@ export default function Navbar() {
             ))}
           </div>
           <a href="/register" style={{display:'inline-flex',alignItems:'center',background:'#ed253b',color:'#fff',padding:'8px 14px',borderRadius:9999,fontWeight:800,fontSize:12,textDecoration:'none',boxShadow:'0 8px 22px #ed253b35',whiteSpace:'nowrap'}}>Join Now →</a>
-          <button onClick={()=>setOpen(!open)} aria-label="Menu" style={{background:'transparent',border:'none',color:'#fff',fontSize:22,cursor:'pointer',display:'none',padding:4}} aria-expanded={open}>☰</button>
+          <button onClick={()=>setOpen(!open)} aria-label="Menu" style={{background:'transparent',border:'none',color:'#fff',fontSize:22,cursor:'pointer',display:'inline-flex',padding:4}} aria-expanded={open}>☰</button>
         </div>
       </div>
       {open && (
