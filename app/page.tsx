@@ -10,16 +10,15 @@ export default function HomePage() {
         <div style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',background:'linear-gradient(90deg,#0d0d0e 0%,rgba(13,13,14,0.65) 55%,rgba(13,13,14,0.4) 100%)',zIndex:2,pointerEvents:'none'}} />
         <div style={{position:'relative',zIndex:10,maxWidth:1200,margin:'auto',padding:'70px 30px 60px',width:'100%',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:40,alignItems:'center'}}>
           <div>
-            <p style={{fontSize:12,textTransform:'uppercase',letterSpacing:'.25em',fontWeight:900,color:'#ed253b',marginBottom:12}}>L Square Fitness Gym</p>
             <h1 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(52px,7vw,110px)',lineHeight:0.95,letterSpacing:'-.06em',color:'#fff',marginBottom:28}}>
               <span style={{display:'block'}}>Stronger</span>
               <span style={{display:'block'}}>Healthier</span>
               <span style={{display:'block'}}>Happier <span style={{color:'#ed253b'}}>You.</span></span>
             </h1>
             <p style={{color:'#b5b5bf',fontSize:16,lineHeight:1.75,maxWidth:460,marginBottom:36}}>Modern Gym. Professional Trainers. Swimming. Personal Training. A Complete Fitness Experience in One Place.</p>
-            <div style={{display:'flex',gap:14,flexWrap:'wrap',alignItems:'center'}}>
-              <Link href="/register" style={{background:'#ed253b',color:'#fff',padding:'15px 28px',borderRadius:9999,fontWeight:800,fontSize:15,textDecoration:'none',boxShadow:'0 10px 30px #ed253b55'}}>Join Membership →</Link>
-              <button onClick={()=>{const m=document.getElementById('video-modal'); if(m)m.style.display='flex';}} style={{background:'rgba(255,255,255,0.08)',color:'#fff',padding:'15px 28px',borderRadius:9999,fontWeight:800,fontSize:15,textDecoration:'none',border:'1px solid rgba(255,255,255,0.22)',cursor:'pointer',display:'inline-flex',alignItems:'center',gap:10,backdropFilter:'blur(8px)'}}>
+            <div style={{display:'flex',gap:14,flexWrap:'nowrap',alignItems:'center',justifyContent:'flex-start'}}>
+              <Link href="/register" style={{background:'#ed253b',color:'#fff',padding:'12px 20px',borderRadius:9999,fontWeight:800,fontSize:14,textDecoration:'none',boxShadow:'0 10px 30px #ed253b55',whiteSpace:'nowrap',flexShrink:0}}>Join Membership →</Link>
+              <button onClick={()=>{const m=document.getElementById('video-modal'); if(m)m.style.display='flex';}} style={{background:'rgba(255,255,255,0.08)',color:'#fff',padding:'12px 20px',borderRadius:9999,fontWeight:800,fontSize:14,textDecoration:'none',border:'1px solid rgba(255,255,255,0.22)',cursor:'pointer',display:'inline-flex',alignItems:'center',gap:8,backdropFilter:'blur(8px)',whiteSpace:'nowrap',flexShrink:0}}>
                 <span style={{width:30,height:30,borderRadius:'50%',background:'#090A0D',display:'inline-grid',placeItems:'center'}}><span style={{width:0,height:0,borderTop:'6px solid transparent',borderBottom:'6px solid transparent',borderLeft:'10px solid #0d0d0e',marginLeft:3}}/></span> Watch Video
               </button>
             </div>
