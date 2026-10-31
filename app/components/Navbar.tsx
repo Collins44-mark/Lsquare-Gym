@@ -16,7 +16,7 @@ export default function Navbar() {
       <div style={{maxWidth:1200,width:'100%',display:'flex',alignItems:'center',justifyContent:'space-between',gap:12,padding:'10px 16px',borderRadius:9999,background:'rgba(20,20,22,0.75)',border:'1px solid rgba(255,255,255,0.08)',backdropFilter:'blur(14px)',WebkitBackdropFilter:'blur(14px)'}}>
         <a href="/" aria-label="Home" style={{display:'flex',alignItems:'center',gap:10,color:'#fff',textDecoration:'none',fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:16,letterSpacing:'-.04em',lineHeight:1}}>
           <span style={{border:'2px solid #ed253b',height:32,width:26,borderRadius:6,display:'grid',placeItems:'center',fontWeight:900,fontSize:20}}>L</span>
-          <span style={{display:'none',fontSize:13,letterSpacing:'.06em',opacity:0.9}}><span style={{color:'#ed253b',fontWeight:900}}>L SQUARE</span> GYM</span>
+          <span style={{fontSize:13,letterSpacing:'.06em',opacity:0.9,display:'inline'}}><span style={{color:'#ed253b',fontWeight:900}}>L SQUARE</span><br/><span style={{fontSize:10,color:'#a1a1aa',fontWeight:600}}>FITNESS GYM</span></span>
         </a>
 
         {/* Desktop links + Join Now */}

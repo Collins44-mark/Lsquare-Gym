@@ -6,7 +6,7 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section aria-label="Hero" style={{position:'relative',minHeight:'100vh',display:'flex',alignItems:'center',background:'#0d0d0e',overflow:'hidden'}}>
-        <img src="/hero-athlete.jpg" alt="Athlete" loading="eager" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',objectFit:'cover',objectPosition:'center 25%',opacity:0.92,zIndex:1}} />
+        <img src="/hero-athlete.jpg" alt="Athlete" loading="eager" style={{position:'absolute',top:0,left:0,minWidth:'100%',minHeight:'100%',width:'100%',height:'100%',objectFit:'contain',objectPosition:'center 20%',opacity:0.92,zIndex:1}} />
         <div style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',background:'linear-gradient(90deg,#0d0d0e 0%,rgba(13,13,14,0.65) 55%,rgba(13,13,14,0.4) 100%)',zIndex:2,pointerEvents:'none'}} />
         <div style={{position:'relative',zIndex:10,maxWidth:1200,margin:'auto',padding:'70px 30px 60px',width:'100%',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:40,alignItems:'center'}}>
           <div>
