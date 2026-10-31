@@ -8,7 +8,7 @@ export default function HomePage() {
       <section aria-label="Hero" style={{position:'relative',minHeight:'100vh',display:'flex',alignItems:'center',background:'#0d0d0e',overflow:'hidden'}}>
         <img src="/hero-athlete.jpg" alt="Athlete" loading="eager" style={{position:'absolute',top:0,right:0,width:'62%',height:'100%',objectFit:'cover',objectPosition:'center 20%',opacity:0.92,zIndex:1}} />
         <div style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',background:'linear-gradient(90deg,#0d0d0e 0%,rgba(13,13,14,0.75) 45%,rgba(13,13,14,0.35) 100%)',zIndex:2,pointerEvents:'none'}} />
-        <div style={{position:'relative',zIndex:10,maxWidth:1200,margin:'auto',padding:'160px 30px 120px',width:'100%',display:'grid',gridTemplateColumns:'1fr 1fr',gap:70,alignItems:'center'}}>
+        <div style={{position:'relative',zIndex:10,maxWidth:1200,margin:'auto',padding:'160px 30px 120px',width:'100%',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:40,alignItems:'center'}}>
           <div>
             <p style={{fontSize:12,textTransform:'uppercase',letterSpacing:'.25em',fontWeight:900,color:'#ed253b',marginBottom:24}}>L Square Fitness Gym</p>
             <h1 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(52px,7vw,110px)',lineHeight:0.95,letterSpacing:'-.06em',color:'#fff',marginBottom:28}}>
@@ -42,7 +42,7 @@ export default function HomePage() {
 
       {/* Facilities */}
       <section id="facilities" aria-label="Facilities" style={{padding:'100px 30px',background:'#121216'}}>
-        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'start',marginBottom:60}}>
+        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:40,alignItems:'start',marginBottom:60}}>
           <div>
             <p style={{fontSize:12,textTransform:'uppercase',letterSpacing:'.22em',fontWeight:900,color:'#ed253b',marginBottom:18}}>Our Facilities & Services</p>
             <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(36px,4.5vw,58px)',lineHeight:1.05,letterSpacing:'-.05em',color:'#fff'}}>Everything You Need <br/><span style={{color:'#ed253b'}}>Under One Roof</span></h2>
@@ -109,7 +109,7 @@ export default function HomePage() {
 
       {/* Why Choose */}
       <section aria-label="Why Choose" style={{padding:'100px 30px',background:'#121216'}}>
-        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'start'}}>
+        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:40,alignItems:'start'}}>
           <div>
             <p style={{fontSize:12,textTransform:'uppercase',letterSpacing:'.22em',fontWeight:900,color:'#ed253b',marginBottom:18}}>Why Choose L Square</p>
             <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(36px,4.5vw,58px)',lineHeight:1.05,letterSpacing:'-.05em',color:'#fff'}}>More Than A Gym <br/><span style={{color:'#ed253b'}}>A Lifestyle.</span></h2>
@@ -158,7 +158,7 @@ export default function HomePage() {
       </section>
 
       <section id="contact" aria-label="Contact" style={{padding:'85px 30px',background:'#090A0D'}}>
-        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'start'}}>
+        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:40,alignItems:'start'}}>
           <div>
             <h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#fff',marginBottom:16}}>Contact</h2>
             <p style={{color:'#A1A1AA',fontSize:15,lineHeight:1.65,marginBottom:24}}>Visit us in Dar es Salaam or reach out for membership questions.</p>
