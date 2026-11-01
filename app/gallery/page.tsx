@@ -1,11 +1,11 @@
 export default function GalleryPage() {
   const imgs = [
-    'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',
-    'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',
-    'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80',
-    'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',
-    'https://images.unsplash.com/photo-1593079831268-3381b92d8669?w=600&q=80',
-    'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80'
+    '/images/gym-strength-new.jpg',
+    '/images/gym-3.jpg',
+    '/images/gym-4.jpg',
+    '/images/gym-5.jpg',
+    '/images/gym-6.jpg',
+    '/images/gym-3.jpg'
   ];
   return (
     <section style={{padding:'85px 30px',background:'#090A0D'}}>

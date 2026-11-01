@@ -1,9 +1,9 @@
 export default function ServicesPage() {
   const services = [
-    {title:'Gym & Strength',img:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',desc:'Weights, machines, and cardio for all levels.'},
-    {title:'Personal Training',img:'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',desc:'One-on-one coaching tailored to your goals.'},
-    {title:'Swimming',img:'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80',desc:'Olympic-size pool with professional coaching.'},
-    {title:'Fitness Programs',img:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',desc:'Group classes, challenges, and community events.'}
+    {title:'Gym & Strength',img:'/images/gym-strength-new.jpg',desc:'Weights, machines, and cardio for all levels.'},
+    {title:'Personal Training',img:'/images/gym-3.jpg',desc:'One-on-one coaching tailored to your goals.'},
+    {title:'Swimming',img:'/images/gym-4.jpg',desc:'Olympic-size pool with professional coaching.'},
+    {title:'Fitness Programs',img:'/images/gym-5.jpg',desc:'Group classes, challenges, and community events.'}
   ];
   return (
     <section style={{padding:'85px 30px',background:'#090A0D'}}>
