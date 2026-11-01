@@ -6,7 +6,7 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section aria-label="Hero" style={{position:'relative',minHeight:'100vh',display:'flex',alignItems:'center',background:'#0d0d0e',overflow:'hidden'}}>
-        <img src="/hero-athlete.jpg" alt="Athlete" loading="eager" style={{position:'absolute',top:0,left:0,minWidth:'100%',minHeight:'100%',width:'100%',height:'100%',objectFit:'contain',objectPosition:'center 20%',opacity:0.92,zIndex:1}} />
+        <img src="/images/gym-1.jpg" alt="Athlete" loading="eager" style={{position:'absolute',top:0,left:0,minWidth:'100%',minHeight:'100%',width:'100%',height:'100%',objectFit:'contain',objectPosition:'center 20%',opacity:0.92,zIndex:1}} />
         <div style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',background:'linear-gradient(90deg,#0d0d0e 0%,rgba(13,13,14,0.65) 55%,rgba(13,13,14,0.4) 100%)',zIndex:2,pointerEvents:'none'}} />
         <div style={{position:'relative',zIndex:10,maxWidth:1200,margin:'auto',padding:'70px 30px 30px',width:'100%',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:40,alignItems:'center'}}>
           <div>
@@ -52,8 +52,8 @@ export default function HomePage() {
         </div>
         <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:22}}>
           {[
-            {title:'Gym & Strength',img:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',desc:'Modern weights and machines for all levels.'},
-            {title:'Personal Training',img:'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',desc:'One-on-one coaching for faster results.'},
+            {title:'Gym & Strength',img:'/images/gym-2.jpg',desc:'Modern weights and machines for all levels.'},
+            {title:'Personal Training',img:'/images/gym-1.jpg',desc:'One-on-one coaching for faster results.'},
             {title:'Swimming Pool',img:'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80',desc:'Olympic-size pool with professional coaching.'},
             {title:'Fitness Programs',img:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',desc:'Structured group classes and challenges.'}
           ].map(s=> (
@@ -96,7 +96,7 @@ export default function HomePage() {
               </div>
             </div>
             <div style={{position:'relative'}}>
-              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Training" style={{width:'100%',borderRadius:20,objectFit:'cover',boxShadow:'0 20px 50px rgba(0,0,0,.4)',display:'block'}} />
+              <img src="/images/gym-1.jpg" alt="Training" style={{width:'100%',borderRadius:20,objectFit:'cover',boxShadow:'0 20px 50px rgba(0,0,0,.4)',display:'block'}} />
             </div>
           </div>
         </div>
@@ -123,9 +123,9 @@ export default function HomePage() {
         </div>
         <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:17}}>
           {[
-            {name:'Gym Only',price:'45,000',unit:'/month',img:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',items:['Access to gym floor','Weights & cardio','Locker room']},
-            {name:'Premium',price:'75,000',unit:'/month',img:'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',items:['Gym + Pool','Personal training 2x/mo','Sauna access']},
-            {name:'Family',price:'120,000',unit:'/month',img:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',items:['2 adults + kids','All facilities','Priority booking']}
+            {name:'Gym Only',price:'45,000',unit:'/month',img:'/images/gym-2.jpg',items:['Access to gym floor','Weights & cardio','Locker room']},
+            {name:'Premium',price:'75,000',unit:'/month',img:'/images/gym-1.jpg',items:['Gym + Pool','Personal training 2x/mo','Sauna access']},
+            {name:'Family',price:'120,000',unit:'/month',img:'/images/gym-1.jpg',items:['2 adults + kids','All facilities','Priority booking']}
           ].map(p=> (
             <div key={p.name} style={{borderRadius:14,overflow:'hidden',background:'rgba(255,255,255,0.04)',backdropFilter:'blur(12px)',border:'1px solid rgba(255,255,255,0.09)',boxShadow:'0 8px 30px rgba(0,0,0,.4)',display:'flex',flexDirection:'column'}}>
               <img src={p.img} alt={p.name} loading="lazy" style={{height:152,width:'100%',objectFit:'cover'}} />
