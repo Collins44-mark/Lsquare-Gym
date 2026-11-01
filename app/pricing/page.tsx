@@ -12,7 +12,7 @@ export default function PricingPage() {
           {name:'Daily Package',price:'10,000',unit:'/day',img:'/images/gym-5.jpg',items:['Gym access','Weights & cardio']},
           {name:'One Week Package (Gym Only)',price:'35,000',unit:'/week',img:'/images/gym-3.jpg',items:['Gym access','Weights & cardio','Locker room']},
           {name:'Ten Day Package (Gym Only)',price:'65,000',unit:'/10 days',img:'/images/gym-4.jpg',items:['Gym + Pool','Weights & cardio']},
-          {name:'Ten Day Package (Swimming & Gym)',price:'90,000',unit:'/10 days',img:'/images/gym-6.jpg',items:['Gym + Pool','Weights & cardio','Locker room']},
+          {name:'Ten Day Package (Swimming & Gym)',price:'90,000',unit:'/10 days',img:'/images/ten-day-swim.jpg',items:['Gym + Pool','Weights & cardio','Locker room']},
         ].map(p=> (
           <div key={p.name} style={{borderRadius:14,overflow:'hidden',background:'rgba(255,255,255,0.04)',backdropFilter:'blur(12px)',border:'1px solid rgba(255,255,255,0.09)',boxShadow:'0 8px 30px rgba(0,0,0,.4)',display:'flex',flexDirection:'column'}}>
             <img src={p.img} alt={p.name} loading="lazy" style={{height:152,width:'100%',objectFit:'cover'}} />
@@ -31,7 +31,7 @@ export default function PricingPage() {
           {name:'Monthly Package (Gym Only)',price:'120,000',unit:'/month',img:'/images/gym-only-original.jpg',items:['Gym access','Weights & cardio','Locker room']},
           {name:'Monthly Package (Swimming & Gym)',price:'150,000',unit:'/month',img:'/images/gym-3.jpg',items:['Gym + Pool','Weights & cardio','Locker room']},
           {name:'Couple Package (Gym Only)',price:'170,000',unit:'/month',img:'/images/gym-4.jpg',items:['2 members','Gym access','Weights & cardio']},
-          {name:'Couple Package (Swimming & Gym)',price:'250,000',unit:'/month',img:'/images/gym-6.jpg',items:['2 members','Gym + Pool','Weights & cardio','Locker room']},
+          {name:'Couple Package (Swimming & Gym)',price:'250,000',unit:'/month',img:'/images/couple-swim.jpg',items:['2 members','Gym + Pool','Weights & cardio','Locker room']},
         ].map(p=> (
           <div key={p.name} style={{borderRadius:14,overflow:'hidden',background:'rgba(255,255,255,0.04)',backdropFilter:'blur(12px)',border:'1px solid rgba(255,255,255,0.09)',boxShadow:'0 8px 30px rgba(0,0,0,.4)',display:'flex',flexDirection:'column'}}>
             <img src={p.img} alt={p.name} loading="lazy" style={{height:152,width:'100%',objectFit:'cover'}} />
