@@ -1,9 +1,14 @@
 import { Plan, Registration, Member, Payment } from './types';
 
 export const PLANS: Plan[] = [
-  { id: 'gym', name: 'Gym Only', price: 45000, period: 'month', features: ['Access to gym floor','Weights & cardio','Locker room'] },
-  { id: 'premium', name: 'Premium', price: 75000, period: 'month', features: ['Gym + Pool','Personal training 2x/mo','Sauna access'] },
-  { id: 'family', name: 'Family', price: 120000, period: 'month', features: ['2 adults + kids','All facilities','Priority booking'] },
+  { id: 'daily', name: 'Daily Package', price: 10000, period: 'day', features: ['Gym access','Weights & cardio'] },
+  { id: 'week', name: 'One Week Package (Gym Only)', price: 35000, period: 'week', features: ['Gym access','Weights & cardio','Locker room'] },
+  { id: 'ten-gym', name: 'Ten Day Package (Gym Only)', price: 65000, period: '10 days', features: ['Gym access','Weights & cardio','Locker room'] },
+  { id: 'ten-swim', name: 'Ten Day Package (Swimming & Gym)', price: 90000, period: '10 days', features: ['Gym + Pool','Weights & cardio','Locker room'] },
+  { id: 'monthly-gym', name: 'Monthly Package (Gym Only)', price: 120000, period: 'month', features: ['Gym access','Weights & cardio','Locker room'] },
+  { id: 'monthly-swim', name: 'Monthly Package (Swimming & Gym)', price: 150000, period: 'month', features: ['Gym + Pool','Weights & cardio','Locker room'] },
+  { id: 'couple-gym', name: 'Couple Package (Gym Only)', price: 170000, period: 'month', features: ['2 members','Gym access','Weights & cardio'] },
+  { id: 'couple-swim', name: 'Couple Package (Swimming & Gym)', price: 250000, period: 'month', features: ['2 members','Gym + Pool','Weights & cardio'] },
 ];
 
 const KEY = 'lsgym_data';
