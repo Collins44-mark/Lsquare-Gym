@@ -53,7 +53,7 @@ export default function HomePage() {
           {[
             {title:'Gym & Strength',img:'/images/gym-2.jpg',desc:'Modern weights and machines for all levels.'},
             {title:'Personal Training',img:'/images/gym-1.jpg',desc:'One-on-one coaching for faster results.'},
-            {title:'Swimming Pool',img:'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80',desc:'Olympic-size pool with professional coaching.'},
+            {title:'Swimming Pool',img:'/images/gym-4.jpg',desc:'Olympic-size pool with professional coaching.'},
             {title:'Fitness Programs',img:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',desc:'Structured group classes and challenges.'}
           ].map(s=> (
             <a key={s.title} href="#pricing" style={{position:'relative',borderRadius:22,overflow:'hidden',textDecoration:'none',display:'block',boxShadow:'0 10px 30px rgba(0,0,0,.3)',transition:'transform .25s ease'}}>
@@ -72,7 +72,7 @@ export default function HomePage() {
       {/* About / Feature Banner */}
       <section aria-label="About Banner" style={{padding:'100px 30px',background:'#0a0a0c'}}>
         <div style={{maxWidth:1240,margin:'auto',borderRadius:28,overflow:'hidden',position:'relative',background:'#0f0f13',border:'1px solid rgba(255,255,255,0.06)',boxShadow:'0 30px 80px rgba(0,0,0,.55)'}}>
-          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80" alt="Training" style={{position:'absolute',top:0,right:0,width:'55%',height:'100%',objectFit:'cover',objectPosition:'center 25%',opacity:0.35,zIndex:1}} />
+          <img src="/images/gym-3.jpg" alt="Training" style={{position:'absolute',top:0,right:0,width:'55%',height:'100%',objectFit:'cover',objectPosition:'center 25%',opacity:0.35,zIndex:1}} />
           <div style={{position:'absolute',top:0,left:0,width:'65%',height:'100%',background:'linear-gradient(90deg,#0f0f13 0%,rgba(15,15,19,0.88) 50%,rgba(15,15,19,0.4) 100%)',zIndex:2}} />
           <div style={{position:'relative',zIndex:10,display:'grid',gridTemplateColumns:'1.1fr 0.9fr',gap:60,alignItems:'center',padding:'80px 60px'}}>
             <div>
@@ -143,9 +143,9 @@ export default function HomePage() {
         <div style={{maxWidth:1240,margin:'auto',textAlign:'center',marginBottom:56}}><h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#fff'}}>Gallery</h2></div>
         <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:20}}>
           {[
-            'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',
-            'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',
-            'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80',
+            '/images/gym-5.jpg',
+            '/images/gym-3.jpg',
+            '/images/gym-4.jpg',
             'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',
           ].map((src,i)=> <img key={i} src={src} alt="Gym" loading="lazy" style={{width:'100%',borderRadius:14,objectFit:'cover',height:260,boxShadow:'0 8px 30px rgba(0,0,0,.4)'}} />)}
         </div>
@@ -163,7 +163,7 @@ export default function HomePage() {
             </div>
             <a href="#" style={{display:'inline-block',marginTop:24,background:'#ed253b',color:'#fff',padding:'12px 20px',borderRadius:10,fontWeight:800,fontSize:13,textDecoration:'none'}}>Send Message</a>
           </div>
-          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Contact" style={{width:'100%',borderRadius:14,objectFit:'cover',boxShadow:'0 8px 30px rgba(0,0,0,.4)'}} />
+          <img src="/images/gym-4.jpg" alt="Contact" style={{width:'100%',borderRadius:14,objectFit:'cover',boxShadow:'0 8px 30px rgba(0,0,0,.4)'}} />
         </div>
       </section>
     </>
