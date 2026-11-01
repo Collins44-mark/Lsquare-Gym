@@ -28,7 +28,7 @@ export default function PricingPage() {
       <h2 style={{fontWeight:800,fontSize:14,color:'#ed253b',textTransform:'uppercase',letterSpacing:'.15em',marginTop:40,marginBottom:8}}>Monthly Packages</h2>
       <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:17}}>
         {[
-          {name:'Monthly Package (Gym Only)',price:'120,000',unit:'/month',img:'/images/gym-5.jpg',items:['Gym access','Weights & cardio','Locker room']},
+          {name:'Monthly Package (Gym Only)',price:'120,000',unit:'/month',img:'/images/gym-only-new.jpg',items:['Gym access','Weights & cardio','Locker room']},
           {name:'Monthly Package (Swimming & Gym)',price:'150,000',unit:'/month',img:'/images/gym-3.jpg',items:['Gym + Pool','Weights & cardio','Locker room']},
           {name:'Couple Package (Gym Only)',price:'170,000',unit:'/month',img:'/images/gym-4.jpg',items:['2 members','Gym access','Weights & cardio']},
           {name:'Couple Package (Swimming & Gym)',price:'250,000',unit:'/month',img:'/images/gym-6.jpg',items:['2 members','Gym + Pool','Weights & cardio','Locker room']},

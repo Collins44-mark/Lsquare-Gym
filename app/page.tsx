@@ -51,7 +51,7 @@ export default function HomePage() {
         </div>
         <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:22}}>
           {[
-            {title:'Gym & Strength',img:'/images/gym-6.jpg',desc:'Modern weights and machines for all levels.'},
+            {title:'Gym & Strength',img:'/images/gym-strength-new.jpg',desc:'Modern weights and machines for all levels.'},
             {title:'Personal Training',img:'/images/gym-3.jpg',desc:'One-on-one coaching for faster results.'},
             {title:'Swimming Pool',img:'/images/gym-4.jpg',desc:'Olympic-size pool with professional coaching.'},
             {title:'Fitness Programs',img:'/images/gym-5.jpg',desc:'Structured group classes and challenges.'}
@@ -143,7 +143,7 @@ export default function HomePage() {
         <div style={{maxWidth:1240,margin:'auto',textAlign:'center',marginBottom:56}}><h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#fff'}}>Gallery</h2></div>
         <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:20}}>
           {[
-            '/images/gym-6.jpg',
+            '/images/gallery-1-new.jpg',
             '/images/gym-3.jpg',
             '/images/gym-4.jpg',
             '/images/gym-5.jpg',
