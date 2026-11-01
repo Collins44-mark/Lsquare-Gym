@@ -3,7 +3,7 @@ export default function Footer() {
     <footer style={{background:'#111215',borderTop:'1px solid rgba(255,255,255,.08)',padding:'60px 30px 30px',color:'#c9c9ce'}}>
       <div style={{maxWidth:1440,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:40,marginBottom:40}}>
         <div>
-          <div style={{fontWeight:900,color:'#fff',fontSize:16,letterSpacing:'-.04em',marginBottom:12}}>L SQUARE <span style={{color:'#ed253b',fontSize:10,letterSpacing:'.18em'}}>FITNESS GYM</span></div>
+          <div style={{fontWeight:900,color:'#fff',fontSize:16,letterSpacing:'-.04em',marginBottom:12}}><img src="/images/brand/l-square-fitness-gym-logo.png" alt="L Square Fitness Gym" style={{height:36,width:'auto',maxWidth:160,objectFit:'contain',objectPosition:'center',display:'block'}} /></div>
           <p style={{fontSize:13,lineHeight:1.6}}>Modern gym, professional trainers, swimming pool and community programs in Dar es Salaam.</p>
         </div>
         <div>
