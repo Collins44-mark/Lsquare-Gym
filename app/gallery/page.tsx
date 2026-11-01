@@ -3,7 +3,6 @@ export default function GalleryPage() {
     '/images/gym-strength-new.jpg',
     '/images/gym-3.jpg',
     '/images/gym-4.jpg',
-    '/images/gym-6.jpg',
     '/images/gym-3.jpg'
   ];
   return (
