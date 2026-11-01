@@ -54,7 +54,7 @@ export default function HomePage() {
             {title:'Gym & Strength',img:'/images/gym-2.jpg',desc:'Modern weights and machines for all levels.'},
             {title:'Personal Training',img:'/images/gym-1.jpg',desc:'One-on-one coaching for faster results.'},
             {title:'Swimming Pool',img:'/images/gym-4.jpg',desc:'Olympic-size pool with professional coaching.'},
-            {title:'Fitness Programs',img:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',desc:'Structured group classes and challenges.'}
+            {title:'Fitness Programs',img:'/images/gym-4.jpg',desc:'Structured group classes and challenges.'}
           ].map(s=> (
             <a key={s.title} href="#pricing" style={{position:'relative',borderRadius:22,overflow:'hidden',textDecoration:'none',display:'block',boxShadow:'0 10px 30px rgba(0,0,0,.3)',transition:'transform .25s ease'}}>
               <div style={{position:'relative',height:260,overflow:'hidden'}}>
@@ -146,7 +146,7 @@ export default function HomePage() {
             '/images/gym-5.jpg',
             '/images/gym-3.jpg',
             '/images/gym-4.jpg',
-            'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80',
+            '/images/gym-5.jpg',
           ].map((src,i)=> <img key={i} src={src} alt="Gym" loading="lazy" style={{width:'100%',borderRadius:14,objectFit:'cover',height:260,boxShadow:'0 8px 30px rgba(0,0,0,.4)'}} />)}
         </div>
       </section>
