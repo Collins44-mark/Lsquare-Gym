@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { getPlans } from "../lib/data";
 export default function PricingPage() {
-  const plans = getPlans();
   return (
     <section style={{padding:'85px 30px',background:'#090A0D'}}>
       <div style={{maxWidth:1240,margin:'auto',textAlign:'center',marginBottom:56}}>
