@@ -97,10 +97,6 @@ export default function HomePage() {
             </div>
             <div style={{position:'relative'}}>
               <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Training" style={{width:'100%',borderRadius:20,objectFit:'cover',boxShadow:'0 20px 50px rgba(0,0,0,.4)',display:'block'}} />
-              <div style={{position:'absolute',bottom:-18,right:-10,width:220,padding:18,borderRadius:16,background:'rgba(255,255,255,0.08)',border:'1px solid rgba(255,255,255,0.12)',backdropFilter:'blur(12px)',boxShadow:'0 16px 40px rgba(0,0,0,.35)'}}>
-                <div style={{fontWeight:900,fontSize:20,color:'#fff',lineHeight:1.15,marginBottom:6}}>Train <br/>Recover <br/><span style={{color:'#ed253b'}}>Grow</span></div>
-                <div style={{fontSize:11,color:'#aaa',marginTop:8}}>More Than A Gym<br/>A Community.</div>
-              </div>
             </div>
           </div>
         </div>
