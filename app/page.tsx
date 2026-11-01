@@ -51,10 +51,10 @@ export default function HomePage() {
         </div>
         <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:22}}>
           {[
-            {title:'Gym & Strength',img:'/images/gym-2.jpg',desc:'Modern weights and machines for all levels.'},
-            {title:'Personal Training',img:'/images/gym-1.jpg',desc:'One-on-one coaching for faster results.'},
+            {title:'Gym & Strength',img:'/images/gym-6.jpg',desc:'Modern weights and machines for all levels.'},
+            {title:'Personal Training',img:'/images/gym-3.jpg',desc:'One-on-one coaching for faster results.'},
             {title:'Swimming Pool',img:'/images/gym-4.jpg',desc:'Olympic-size pool with professional coaching.'},
-            {title:'Fitness Programs',img:'/images/gym-4.jpg',desc:'Structured group classes and challenges.'}
+            {title:'Fitness Programs',img:'/images/gym-5.jpg',desc:'Structured group classes and challenges.'}
           ].map(s=> (
             <a key={s.title} href="#pricing" style={{position:'relative',borderRadius:22,overflow:'hidden',textDecoration:'none',display:'block',boxShadow:'0 10px 30px rgba(0,0,0,.3)',transition:'transform .25s ease'}}>
               <div style={{position:'relative',height:260,overflow:'hidden'}}>
@@ -95,7 +95,7 @@ export default function HomePage() {
               </div>
             </div>
             <div style={{position:'relative'}}>
-              <img src="/images/gym-1.jpg" alt="Training" style={{width:'100%',borderRadius:20,objectFit:'cover',boxShadow:'0 20px 50px rgba(0,0,0,.4)',display:'block'}} />
+              <img src="/images/gym-3.jpg" alt="Training" style={{width:'100%',borderRadius:20,objectFit:'cover',boxShadow:'0 20px 50px rgba(0,0,0,.4)',display:'block'}} />
             </div>
           </div>
         </div>
@@ -122,9 +122,9 @@ export default function HomePage() {
         </div>
         <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:17}}>
           {[
-            {name:'Gym Only',price:'45,000',unit:'/month',img:'/images/gym-2.jpg',items:['Access to gym floor','Weights & cardio','Locker room']},
-            {name:'Premium',price:'75,000',unit:'/month',img:'/images/gym-1.jpg',items:['Gym + Pool','Personal training 2x/mo','Sauna access']},
-            {name:'Family',price:'120,000',unit:'/month',img:'/images/gym-1.jpg',items:['2 adults + kids','All facilities','Priority booking']}
+            {name:'Gym Only',price:'45,000',unit:'/month',img:'/images/gym-6.jpg',items:['Access to gym floor','Weights & cardio','Locker room']},
+            {name:'Premium',price:'75,000',unit:'/month',img:'/images/gym-3.jpg',items:['Gym + Pool','Personal training 2x/mo','Sauna access']},
+            {name:'Family',price:'120,000',unit:'/month',img:'/images/gym-5.jpg',items:['2 adults + kids','All facilities','Priority booking']}
           ].map(p=> (
             <div key={p.name} style={{borderRadius:14,overflow:'hidden',background:'rgba(255,255,255,0.04)',backdropFilter:'blur(12px)',border:'1px solid rgba(255,255,255,0.09)',boxShadow:'0 8px 30px rgba(0,0,0,.4)',display:'flex',flexDirection:'column'}}>
               <img src={p.img} alt={p.name} loading="lazy" style={{height:152,width:'100%',objectFit:'cover'}} />
@@ -143,10 +143,10 @@ export default function HomePage() {
         <div style={{maxWidth:1240,margin:'auto',textAlign:'center',marginBottom:56}}><h2 style={{fontFamily:"'Work Sans',system-ui,sans-serif",fontWeight:900,fontSize:'clamp(28px,3vw,42px)',lineHeight:1.1,letterSpacing:'-.045em',color:'#fff'}}>Gallery</h2></div>
         <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:20}}>
           {[
-            '/images/gym-2.jpg',
+            '/images/gym-6.jpg',
             '/images/gym-3.jpg',
             '/images/gym-4.jpg',
-            '/images/gym-1.jpg',
+            '/images/gym-5.jpg',
           ].map((src,i)=> <img key={i} src={src} alt="Gym" loading="lazy" style={{width:'100%',borderRadius:14,objectFit:'cover',height:260,boxShadow:'0 8px 30px rgba(0,0,0,.4)'}} />)}
         </div>
       </section>
