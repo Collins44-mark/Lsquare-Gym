@@ -49,7 +49,7 @@ export default function HomePage() {
             <p style={{color:'#aaa',fontSize:15,lineHeight:1.7,maxWidth:380,marginLeft:'auto'}}>From modern gym equipment to expert coaching and a refreshing swimming pool, L Square gives you a complete fitness experience designed for every goal.</p>
           </div>
         </div>
-        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:22}}>
+        <div style={{maxWidth:1240,margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(140px,1fr))',gap:22}}>
           {[
             {title:'Gym & Strength',img:'/images/gym-strength-new.jpg',desc:'Modern weights and machines for all levels.'},
             {title:'Personal Training',img:'/images/gym-3.jpg',desc:'One-on-one coaching for faster results.'},
