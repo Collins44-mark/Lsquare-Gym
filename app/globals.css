@@ -13,3 +13,5 @@ img{max-width:100%;display:block;height:auto}
   [data-nav="mobile-btn"] { display: none !important; }
   [data-nav="mobile-menu"] { display: none !important; }
 }
+
+@media (max-width: 767px) { section[aria-label="Hero"] { min-height: 560px !important; background-position: center 20% !important; } }
